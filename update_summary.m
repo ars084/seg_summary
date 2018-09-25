@@ -1,4 +1,4 @@
-function out = update_summary
+function update_summary
 close all
 %Loads a waiting bar
 f = waitbar(0,'0%','Name','Extracting info');
@@ -178,5 +178,4 @@ qpq = cell2table(results(1:j,:));
 qpq.Properties.VariableNames = title;
 csv_title = ['Segs_updated_',date,'.csv'];
 writetable(qpq,csv_title)
-out = qpq;
 end
